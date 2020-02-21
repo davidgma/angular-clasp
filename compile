@@ -1,7 +1,8 @@
 #!/bin/bash
 echo This builds, but does not run, the program.
 rm -rf dist
-ng build --base-href "http://localhost:4203"
+#ng build --base-href "http://localhost:4203"
+ng build
 
 #echo Setting up the local busybox server
 #pkill -f "busybox httpd -p 4203 -h ./dist"
@@ -9,7 +10,7 @@ ng build --base-href "http://localhost:4203"
 #echo Site served at http://localhost:4203
 
 echo Copying files to clasp directory
-rm "./clasp"/*.html
+#rm "./clasp"/*.html
 # cp ./dist/index.html ./clasp/index.html
 for f in ./dist/*.js
 do 
