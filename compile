@@ -1,0 +1,4 @@
+#!/bin/bash
+echo This compiles, but does not run, the program.
+tsc -p ./src/
+
