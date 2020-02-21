@@ -1,5 +1,5 @@
 # angular-clasp
-An attempt to see whether Google Apps Scripts can be written in Angular and clasp.
+A failed attempt to see whether Google Apps Scripts can be written in Angular and clasp. I couldn't get it to work.
 
 ## Prerequisites
 
