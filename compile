@@ -1,4 +1,21 @@
 #!/bin/bash
-echo This compiles, but does not run, the program.
-tsc -p ./src/
+echo This builds, but does not run, the program.
+rm -rf dist
+ng build --base-href "http://localhost:4203"
+
+#echo Setting up the local busybox server
+#pkill -f "busybox httpd -p 4203 -h ./dist"
+#busybox httpd -p 4203 -h ./dist
+#echo Site served at http://localhost:4203
+
+echo Copying files to clasp directory
+rm "./clasp"/*.html
+# cp ./dist/index.html ./clasp/index.html
+for f in ./dist/*.js
+do 
+    length=`expr length $f`
+    echo cp $f ./clasp${f:6:$length-9}.html
+    cp $f ./clasp${f:6:$length-9}.html
+done
+
 
